@@ -1,0 +1,258 @@
+{
+  "purpose": "Private review mapping from original challenge filenames to public asset filenames. Do not import this file into the site.",
+  "sourceFolder": "challenge-images-originals",
+  "publicFolder": "public/challenge",
+  "format": "Source filenames end in .PNG, but every file is JPEG data. Public copies are byte-for-byte and use .jpg. Images were not converted, cropped, compressed, or regenerated.",
+  "pairs": [
+    {
+      "subject": "Burger",
+      "originalPhotograph": "RealBurger.PNG",
+      "originalAiImage": "FakeBurger1.PNG",
+      "photographFile": "pair-01-a.jpg",
+      "aiImageFile": "pair-01-b.jpg",
+      "newFilenames": [
+        "pair-01-a.jpg",
+        "pair-01-b.jpg"
+      ],
+      "photograph": {
+        "file": "pair-01-a.jpg",
+        "sha256": "cb7e280d7ece307bfc91f35af8a38b81dcccceb03b67da1033ab59153ed7d030",
+        "bytes": 267389,
+        "width": 1050,
+        "height": 1050
+      },
+      "aiImage": {
+        "file": "pair-01-b.jpg",
+        "sha256": "0554ef127dc0f1161553018ad4f5f9c970d658678afb265704c5f664aaaf370e",
+        "bytes": 322056,
+        "width": 1182,
+        "height": 1182
+      }
+    },
+    {
+      "subject": "Cake",
+      "originalPhotograph": "RealCake.PNG",
+      "originalAiImage": "FakeCake1.PNG",
+      "photographFile": "pair-02-b.jpg",
+      "aiImageFile": "pair-02-a.jpg",
+      "newFilenames": [
+        "pair-02-b.jpg",
+        "pair-02-a.jpg"
+      ],
+      "photograph": {
+        "file": "pair-02-b.jpg",
+        "sha256": "5df59fc2593f1bc4ff7d6ce55e0d36ec80d29f34607b4c0e19cf304f71d615a0",
+        "bytes": 190886,
+        "width": 1138,
+        "height": 1138
+      },
+      "aiImage": {
+        "file": "pair-02-a.jpg",
+        "sha256": "6d60cbd1693202778c57ae1355cd26ea15ec646945ad41a83f62cbbefa6c5db2",
+        "bytes": 222109,
+        "width": 1199,
+        "height": 1199
+      }
+    },
+    {
+      "subject": "Cat",
+      "originalPhotograph": "RealCat.PNG",
+      "originalAiImage": "FakeCat1.PNG",
+      "photographFile": "pair-03-b.jpg",
+      "aiImageFile": "pair-03-a.jpg",
+      "newFilenames": [
+        "pair-03-b.jpg",
+        "pair-03-a.jpg"
+      ],
+      "photograph": {
+        "file": "pair-03-b.jpg",
+        "sha256": "eaef75c2c5f1bd0b354a472288babcf831edd33574668cb4bf3191a7427fff2d",
+        "bytes": 338643,
+        "width": 1106,
+        "height": 1106
+      },
+      "aiImage": {
+        "file": "pair-03-a.jpg",
+        "sha256": "caa9b84375f65b6f17f1f24fefd306da0035ca04dfd62fcf129d48bf2fd8f50e",
+        "bytes": 293487,
+        "width": 1212,
+        "height": 1212
+      }
+    },
+    {
+      "subject": "Clock",
+      "originalPhotograph": "RealClock.PNG",
+      "originalAiImage": "FakeClock1.PNG",
+      "photographFile": "pair-04-a.jpg",
+      "aiImageFile": "pair-04-b.jpg",
+      "newFilenames": [
+        "pair-04-a.jpg",
+        "pair-04-b.jpg"
+      ],
+      "photograph": {
+        "file": "pair-04-a.jpg",
+        "sha256": "6e2f00b482ee685bff69690cd710340f3ee78864325d0aa3a17061ce2693c66f",
+        "bytes": 274715,
+        "width": 1102,
+        "height": 1102
+      },
+      "aiImage": {
+        "file": "pair-04-b.jpg",
+        "sha256": "25c386aafedf54a9ed58951b9baf0f9eb3e66f1d94cd6b2b04d2b7b190f62976",
+        "bytes": 317267,
+        "width": 1210,
+        "height": 1210
+      }
+    },
+    {
+      "subject": "Cup",
+      "originalPhotograph": "RealCup.PNG",
+      "originalAiImage": "FakeCup1.PNG",
+      "photographFile": "pair-05-b.jpg",
+      "aiImageFile": "pair-05-a.jpg",
+      "newFilenames": [
+        "pair-05-b.jpg",
+        "pair-05-a.jpg"
+      ],
+      "photograph": {
+        "file": "pair-05-b.jpg",
+        "sha256": "e2e83383332b57a0609279e281ed06f70e8325ecc6ef7169db72ad2de799d664",
+        "bytes": 119269,
+        "width": 1104,
+        "height": 1104
+      },
+      "aiImage": {
+        "file": "pair-05-a.jpg",
+        "sha256": "bd0e3fe79f87e5cd6997fc6dc9e4bb7a4a70fa9ab78b3df43355f3d73cda5fc2",
+        "bytes": 162152,
+        "width": 1163,
+        "height": 1163
+      }
+    },
+    {
+      "subject": "Dog",
+      "originalPhotograph": "RealDog.PNG",
+      "originalAiImage": "FakeDog1.PNG",
+      "photographFile": "pair-06-a.jpg",
+      "aiImageFile": "pair-06-b.jpg",
+      "newFilenames": [
+        "pair-06-a.jpg",
+        "pair-06-b.jpg"
+      ],
+      "photograph": {
+        "file": "pair-06-a.jpg",
+        "sha256": "d4f82166de636dac4c15f21061d302ed90be5d33f14498d1946eca48b8bc9635",
+        "bytes": 93922,
+        "width": 647,
+        "height": 647
+      },
+      "aiImage": {
+        "file": "pair-06-b.jpg",
+        "sha256": "24876feb347e760eaafc8a4f70dc590533d30e2aa38005259c767f792462b807",
+        "bytes": 333377,
+        "width": 1217,
+        "height": 1217
+      }
+    },
+    {
+      "subject": "Flower",
+      "originalPhotograph": "RealFlower.PNG",
+      "originalAiImage": "FakeFlower1.PNG",
+      "photographFile": "pair-07-a.jpg",
+      "aiImageFile": "pair-07-b.jpg",
+      "newFilenames": [
+        "pair-07-a.jpg",
+        "pair-07-b.jpg"
+      ],
+      "photograph": {
+        "file": "pair-07-a.jpg",
+        "sha256": "47eaddccf13d49dadcc11f2b98ea77366ad1256594033e53bd903283838fc6f4",
+        "bytes": 303561,
+        "width": 1140,
+        "height": 1140
+      },
+      "aiImage": {
+        "file": "pair-07-b.jpg",
+        "sha256": "10eefd7f7418ed0fc6da34aac59748d012c748af1f59edb3cfc0d4a8ed508570",
+        "bytes": 330796,
+        "width": 1196,
+        "height": 1196
+      }
+    },
+    {
+      "subject": "Pizza",
+      "originalPhotograph": "RealPizza.PNG",
+      "originalAiImage": "FakePizza1.PNG",
+      "photographFile": "pair-08-b.jpg",
+      "aiImageFile": "pair-08-a.jpg",
+      "newFilenames": [
+        "pair-08-b.jpg",
+        "pair-08-a.jpg"
+      ],
+      "photograph": {
+        "file": "pair-08-b.jpg",
+        "sha256": "59d8242f97e8f4735a31f011cf51acbd4dd7a237a7a37f9745417fe1e3fbcefc",
+        "bytes": 331143,
+        "width": 1107,
+        "height": 1107
+      },
+      "aiImage": {
+        "file": "pair-08-a.jpg",
+        "sha256": "a2b589aa3e8aae94a2c6af392b56babc33608a960b2065c87ae95ee7a1e9d1d6",
+        "bytes": 292828,
+        "width": 1088,
+        "height": 1088
+      }
+    },
+    {
+      "subject": "Plant",
+      "originalPhotograph": "RealPlant.PNG",
+      "originalAiImage": "FakePlant1.PNG",
+      "photographFile": "pair-09-a.jpg",
+      "aiImageFile": "pair-09-b.jpg",
+      "newFilenames": [
+        "pair-09-a.jpg",
+        "pair-09-b.jpg"
+      ],
+      "photograph": {
+        "file": "pair-09-a.jpg",
+        "sha256": "8cc3729a459c5445babd72a93be501424e678396a7f9d2fd4b272bafe6264af1",
+        "bytes": 240960,
+        "width": 1000,
+        "height": 1000
+      },
+      "aiImage": {
+        "file": "pair-09-b.jpg",
+        "sha256": "41d3f0d0509559e2ecc25d0665bb196359ac31683214d13fdae9b7a688d0e769",
+        "bytes": 300818,
+        "width": 1233,
+        "height": 1233
+      }
+    },
+    {
+      "subject": "Tree",
+      "originalPhotograph": "RealTree.PNG",
+      "originalAiImage": "FakeTree1.PNG",
+      "photographFile": "pair-10-b.jpg",
+      "aiImageFile": "pair-10-a.jpg",
+      "newFilenames": [
+        "pair-10-b.jpg",
+        "pair-10-a.jpg"
+      ],
+      "photograph": {
+        "file": "pair-10-b.jpg",
+        "sha256": "3c261a4a20d7b7109dfcbdb0b438ccad7f2fd89cf2a94b5a736d6a2a195d278d",
+        "bytes": 204667,
+        "width": 767,
+        "height": 767
+      },
+      "aiImage": {
+        "file": "pair-10-a.jpg",
+        "sha256": "c7b4e24499117f6b9b8dc97cfbaf7d75f08c76113c301d7b88bdd52f05bf2854",
+        "bytes": 465472,
+        "width": 1214,
+        "height": 1214
+      }
+    }
+  ]
+}

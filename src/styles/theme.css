@@ -1,0 +1,30 @@
+/*
+  Brand colors sampled from the ClearSight logo (public/logo.png).
+
+  Navy #082041 — magnifying glass and the word “Clear”.
+  Blue #12539f — checkmark and the word “Sight”.
+
+  Change these variables to retheme the page. White text on navy is the
+  high-contrast pair used for the instruction-gap section.
+*/
+:root {
+  --color-navy: #082041;
+  --color-navy-hover: #0c305f;
+  --color-blue: #12539f;
+  --color-ink: #1c3348;
+  --color-muted: #3d4f63;
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-line: #dde3ea;
+  --color-notice-bg: #e7eef8;
+  --color-on-navy: #ffffff;
+  --color-on-navy-soft: #e4edf7;
+  /* Logo wordmark is a bold geometric sans (Montserrat). */
+  --font-serif: "Montserrat Variable", Montserrat, "Avenir Next", "Segoe UI", sans-serif;
+  --font-sans: "Montserrat Variable", Montserrat, "Avenir Next", "Segoe UI", sans-serif;
+  --header-height: 4.5rem;
+  --radius: 10px;
+  --wrap: min(1120px, calc(100% - 2.5rem));
+  --section-space: clamp(4.25rem, 8vw, 6.5rem);
+  --focus-ring: 2px solid var(--color-blue);
+}
