@@ -57,7 +57,7 @@ export const learnPage = {
     id: "articles",
     heading: "Explore our articles",
     support:
-      "Read more from ClearSight on recognizing misleading content, checking claims, and sharing responsibly.",
+      "More than 10 educational articles are published on Medium. The cards below link a selection, not the full set. ClearSight also worked with TheKairosTimes to publish a paper on digital literacy and media safety.",
   },
   practice: {
     heading: "Ready to practice?",

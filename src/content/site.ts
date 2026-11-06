@@ -41,7 +41,7 @@ export const heroActions = {
   secondary: { href: "#our-mission", label: "Our Mission" },
 } as const;
 
-export type SurveyStatus = "draft" | "final";
+export type SurveyStatus = "draft" | "reported";
 
 export type SurveyStatistic = {
   id: string;
@@ -49,57 +49,61 @@ export type SurveyStatistic = {
   label: string;
 };
 
+export type HighlightFigure = {
+  id: string;
+  lead: string;
+  value: string;
+  label: string;
+  /** Source and interpretation. Not an audit or a scored-test result. */
+  context: string;
+};
+
 export type SurveyDetails = {
-  /** "draft" shows the placeholder disclosures. Use "final" only after review. */
+  /** "draft" shows placeholder disclosures. "reported" uses paper-draft figures. */
   status: SurveyStatus;
   sampleSize: number;
-  geography: string;
   /** ISO date (YYYY-MM-DD). Leave null until collection dates are known. */
   collectionStart: string | null;
   /** ISO date (YYYY-MM-DD). Leave null until collection dates are known. */
   collectionEnd: string | null;
-  /** Quoted question wording for final reporting. Leave null until it can be stated accurately. */
+  /** Quoted question wording. Leave null until it can be stated accurately. */
   questionWording: string | null;
   statistics: SurveyStatistic[];
-  instructionGap: SurveyStatistic;
+  instructionGap: HighlightFigure;
 };
 
 /**
- * All current percentages and the sample size are placeholders.
- * They are not finalized findings. Keep status set to "draft" until responses
- * are collected and reviewed, then replace the figures and set status to "final".
+ * Community-survey figures from the ClearSight paper draft.
+ * They are not independently audited. Do not add a percentage the draft
+ * does not state, and do not turn "about eight in ten" into a scored-test result.
+ * The draft does not give a geography, collection dates, or question wording.
  */
 export const survey: SurveyDetails = {
-  status: "draft",
-  sampleSize: 820,
-  geography: "Greater Austin Area",
+  status: "reported",
+  sampleSize: 283,
   collectionStart: null,
   collectionEnd: null,
   questionWording: null,
   statistics: [
     {
-      id: "believed-false",
-      percent: 75,
-      label:
-        "Believed an online claim in the past 30 days and later learned it was false or misleading.",
+      id: "misleading-content",
+      percent: 64,
+      label: "of respondents reported regularly encountering misleading content online.",
     },
     {
-      id: "concerned",
-      percent: 60,
-      label: "Are very concerned about being misled by online information.",
-    },
-    {
-      id: "ai-confidence",
-      percent: 50,
-      label:
-        "Are either slightly confident or not at all confident in their ability to distinguish an AI-generated image from a real one.",
+      id: "online-daily",
+      percent: 96,
+      label: "of respondents reported going online daily.",
     },
   ],
   instructionGap: {
-    id: "prior-instruction",
-    percent: 5,
+    id: "cannot-distinguish",
+    lead: "About",
+    value: "8 in 10",
     label:
-      "Reported prior instruction on evaluating online information or recognizing misleading content.",
+      "respondents reported being unable to distinguish a genuine image from an AI-generated one.",
+    context:
+      "ClearSight community survey, 283 responses. This is what people reported about their own ability, not the result of a scored test.",
   },
 };
 
@@ -110,7 +114,7 @@ export const surveyReportingNote =
   "Survey results will be updated after responses are collected and reviewed. Final reporting will include the sample size, collection dates, and relevant question wording.";
 
 export function surveyFraming(details: SurveyDetails): string {
-  const summary = `Out of a local survey of ${details.sampleSize} people in the ${details.geography}.`;
+  const summary = `ClearSight community survey, ${details.sampleSize} responses`;
   if (details.status === "draft") {
     return `Placeholder survey summary: ${summary}`;
   }
@@ -119,7 +123,7 @@ export function surveyFraming(details: SurveyDetails): string {
 
 export function instructionGapDisclosure(details: SurveyDetails): string | null {
   if (details.status !== "draft") return null;
-  return `Draft placeholder — not a finalized survey finding. Part of the provisional ${details.geography} survey summary above.`;
+  return "Draft placeholder — not a finalized survey finding.";
 }
 
 function formatIsoDate(iso: string): string {
@@ -142,7 +146,7 @@ export function surveyUpdateNote(details: SurveyDetails): string | null {
 
   const wording = details.questionWording?.trim();
   const wordingSentence = wording ? ` Question wording: ${wording}` : "";
-  return `Collected ${formatIsoDate(details.collectionStart)}–${formatIsoDate(details.collectionEnd)}. Local survey of ${details.sampleSize} people in the ${details.geography}.${wordingSentence}`;
+  return `Collected ${formatIsoDate(details.collectionStart)}–${formatIsoDate(details.collectionEnd)}. ClearSight community survey, ${details.sampleSize} responses.${wordingSentence}`;
 }
 
 export const problem = {
@@ -186,13 +190,15 @@ export const pillars = {
   heading: "Three ways to build a clearer perspective.",
   intro:
     "ClearSight is built around short videos, hands-on learning, and opportunities to keep practicing.",
+  reach:
+    "Recorded by the end of the Grow phase: 300,000 cumulative video views and 500 website visits. Project figures reported in the ClearSight paper draft. These are recorded counts, not unique people reached, current live analytics, or evidence that verification skills improved.",
   items: [
     {
       id: "watch",
       label: "Watch & Learn",
       title: "Small videos. Thoughtful questions.",
       description:
-        "Explore short educational videos on Instagram, TikTok, and YouTube that introduce misleading content, source-checking, and questions to ask before you share.",
+        "More than 100 educational videos have been published on Instagram, TikTok, and YouTube, the platforms survey respondents most commonly reported using. This page does not yet link to those accounts.",
       available: false,
       url: null,
       internalPath: null,
@@ -203,7 +209,7 @@ export const pillars = {
       label: "Learn Together",
       title: "Put your thinking into practice.",
       description:
-        "Take part in an in-person workshop with guided activities and opportunities to check your understanding. Practice investigating sources, checking context, and deciding what evidence you need.",
+        "An in-person workshop had more than 25 registrations and approximately 25 participants. Those counts are separate, so this is not an exact attendance total. Details for another session are not posted yet.",
       available: false,
       url: null,
       internalPath: null,
@@ -247,7 +253,7 @@ export const takeaway = {
 } as const;
 
 export const instructionGapCopy = {
-  heading: "But how many have been taught what to do next?",
+  heading: "Telling a real image from an AI-generated one was not easy.",
   closing: "That’s the gap ClearSight aims to help close.",
 } as const;
 

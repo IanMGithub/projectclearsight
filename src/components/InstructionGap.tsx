@@ -15,12 +15,15 @@ export function InstructionGap() {
         <div className="instruction-gap-inner">
           <h2 id="instruction-gap-heading">{instructionGapCopy.heading}</h2>
           <p className="gap-figure">
-            <span className="gap-only">Only</span>
-            <span className="gap-percent">{survey.instructionGap.percent}%</span>
+            <span className="gap-only">{survey.instructionGap.lead}</span>
+            <span className="gap-percent">{survey.instructionGap.value}</span>
           </p>
           <p className="gap-support">{survey.instructionGap.label}</p>
           <p className="gap-close">{instructionGapCopy.closing}</p>
           {disclosure ? <p className="gap-disclosure">{disclosure}</p> : null}
+          {survey.status !== "draft" ? (
+            <p className="gap-disclosure">{survey.instructionGap.context}</p>
+          ) : null}
         </div>
       </section>
       {note ? (

@@ -10,6 +10,7 @@ export function Pillars() {
           {pillars.heading}
         </h2>
         <p className="pillars-intro">{pillars.intro}</p>
+        <p className="pillars-note">{pillars.reach}</p>
         <ul className="pillar-grid">
           {pillars.items.map((item, index) => {
             const href = openDestination(item);
