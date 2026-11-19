@@ -30,7 +30,7 @@ npm test
 | Learn | `/learn` |
 | Test | `/challenge` |
 | Activities | `/activities` |
-| Contact & Feedback | `/contact` |
+| Contact | `/contact` |
 
 There is no `/test` route. The activity keeps `/challenge` so existing links stay valid. Unknown paths render the homepage after the app loads. A static host must send extension-less routes to `index.html`; see Vercel below.
 

@@ -431,14 +431,6 @@ main:focus {
   line-height: 1.7;
 }
 
-.pillars-note {
-  max-width: 42rem;
-  margin-top: 1rem;
-  color: var(--color-muted);
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 .pillars-intro {
   max-width: 38rem;
   margin-top: 1rem;
@@ -489,13 +481,6 @@ main:focus {
   line-height: 1.55;
 }
 
-.availability {
-  margin-top: auto;
-  padding-top: 1.2rem;
-  color: var(--color-navy);
-  font-weight: 700;
-}
-
 .pillar .text-link {
   margin-top: auto;
   padding-top: 1.2rem;
@@ -518,33 +503,6 @@ main:focus {
   margin-top: 0.4rem;
   color: var(--color-muted);
   font-size: 1.02rem;
-}
-
-.stay-connected .section-heading {
-  max-width: none;
-}
-
-.stay-body {
-  max-width: 38rem;
-  margin-top: 0.9rem;
-}
-
-.social-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  margin-top: 1.15rem;
-}
-
-.social-list a {
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-.social-pending {
-  margin-top: 1rem;
-  color: var(--color-navy);
-  font-weight: 700;
 }
 
 .site-footer {

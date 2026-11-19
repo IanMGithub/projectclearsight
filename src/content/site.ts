@@ -4,10 +4,8 @@
  * Logo: public/logo.png
  *   Replace that file directly, or replace brand/logo-source.png and run `npm run logo`.
  * Colors: src/styles/theme.css
- * Survey figures, draft status, dates, pillar availability, and social links: this file.
+ * Survey figures, draft status, dates, and pillar links: this file.
  */
-
-import { isHttpUrl } from "./links.ts";
 
 export const brand = {
   name: "ClearSight",
@@ -26,7 +24,7 @@ export const navigation = [
   { id: "learn", href: "/learn", label: "Learn" },
   { id: "challenge", href: "/challenge", label: "Test" },
   { id: "activities", href: "/activities", label: "Activities" },
-  { id: "contact", href: "/contact", label: "Contact & Feedback" },
+  { id: "contact", href: "/contact", label: "Contact" },
 ] as const;
 
 export type SitePage = (typeof navigation)[number]["id"];
@@ -192,15 +190,13 @@ export const pillars = {
   heading: "Three ways to build a clearer perspective.",
   intro:
     "ClearSight is built around short videos, hands-on learning, and opportunities to keep practicing.",
-  reach:
-    "Recorded by the end of the Grow phase: 300,000 cumulative video views and 500 website visits. Project figures reported in the ClearSight paper draft. These are recorded counts, not unique people reached, current live analytics, or evidence that verification skills improved.",
   items: [
     {
       id: "watch",
       label: "Watch & Learn",
       title: "Small videos. Thoughtful questions.",
       description:
-        "More than 100 educational videos have been published on Instagram, TikTok, and YouTube, the platforms survey respondents most commonly reported using. This page does not yet link to those accounts.",
+        "More than 100 educational videos have been published on Instagram, TikTok, and YouTube, the platforms survey respondents most commonly reported using.",
       available: false,
       url: null,
       internalPath: null,
@@ -211,7 +207,7 @@ export const pillars = {
       label: "Learn Together",
       title: "Put your thinking into practice.",
       description:
-        "An in-person workshop had more than 25 registrations and approximately 25 participants. Those counts are separate, so this is not an exact attendance total. Details for another session are not posted yet.",
+        "An in-person workshop had 35 registrations and 35 participants.",
       available: false,
       url: null,
       internalPath: null,
@@ -258,28 +254,6 @@ export const instructionGapCopy = {
   heading: "Telling a real image from an AI-generated one was not easy.",
   closing: "That’s the gap ClearSight aims to help close.",
 } as const;
-
-export type SocialLink = {
-  id: "instagram" | "tiktok" | "youtube";
-  name: string;
-  /** Full profile URL. Leave null until a real URL exists. Do not invent a handle. */
-  url: string | null;
-};
-
-export const stayConnected = {
-  heading: "Stay Connected",
-  body: "Follow ClearSight for project updates, educational content, and opportunities to get involved.",
-  pendingLabel: "Social links coming soon.",
-  links: [
-    { id: "instagram", name: "Instagram", url: null },
-    { id: "tiktok", name: "TikTok", url: null },
-    { id: "youtube", name: "YouTube", url: null },
-  ] satisfies SocialLink[],
-};
-
-export function activeSocialLinks(links: readonly SocialLink[]): Array<SocialLink & { url: string }> {
-  return links.flatMap((link) => (isHttpUrl(link.url) ? [{ ...link, url: link.url }] : []));
-}
 
 export const footer = {
   tagline:

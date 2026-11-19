@@ -50,7 +50,7 @@ assert.equal(currentPage("/contact/"), "contact");
 assert.equal(currentPage("/unknown"), "home");
 assert.deepEqual(
   navigation.map((item) => item.label),
-  ["Home", "Learn", "Test", "Activities", "Contact & Feedback"],
+  ["Home", "Learn", "Test", "Activities", "Contact"],
 );
 assert.equal(navigation.find((item) => item.label === "Test")?.href, "/challenge");
 assert.equal(

@@ -10,7 +10,6 @@ export function Pillars() {
           {pillars.heading}
         </h2>
         <p className="pillars-intro">{pillars.intro}</p>
-        <p className="pillars-note">{pillars.reach}</p>
         <ul className="pillar-grid">
           {pillars.items.map((item, index) => {
             const href = openDestination(item);
@@ -28,9 +27,7 @@ export function Pillars() {
                   <ExternalLink className="text-link" href={href}>
                     {item.ctaLabel || "Learn more"}
                   </ExternalLink>
-                ) : (
-                  <p className="availability">Coming soon</p>
-                )}
+                ) : null}
               </li>
             );
           })}

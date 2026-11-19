@@ -10,7 +10,6 @@ import { LearnPage } from "./components/LearnPage.tsx";
 import { Mission } from "./components/Mission.tsx";
 import { Pillars } from "./components/Pillars.tsx";
 import { Problem } from "./components/Problem.tsx";
-import { StayConnected } from "./components/StayConnected.tsx";
 import { Takeaway } from "./components/Takeaway.tsx";
 
 export default function App() {
@@ -36,7 +35,6 @@ export default function App() {
             <Mission />
             <Pillars />
             <Takeaway />
-            <StayConnected />
           </>
         )}
       </main>
