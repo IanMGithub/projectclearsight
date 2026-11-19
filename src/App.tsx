@@ -2,6 +2,8 @@ import { currentPage } from "./content/site.ts";
 import { Footer } from "./components/Footer.tsx";
 import { Header } from "./components/Header.tsx";
 import { Hero } from "./components/Hero.tsx";
+import { ActivitiesPage } from "./components/ActivitiesPage.tsx";
+import { ContactPage } from "./components/ContactPage.tsx";
 import { ImageChallenge } from "./components/ImageChallenge.tsx";
 import { InstructionGap } from "./components/InstructionGap.tsx";
 import { LearnPage } from "./components/LearnPage.tsx";
@@ -22,6 +24,10 @@ export default function App() {
           <ImageChallenge />
         ) : page === "learn" ? (
           <LearnPage />
+        ) : page === "activities" ? (
+          <ActivitiesPage />
+        ) : page === "contact" ? (
+          <ContactPage />
         ) : (
           <>
             <Hero />

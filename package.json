@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "test": "node --experimental-strip-types scripts/challenge-logic.test.ts && node --experimental-strip-types scripts/learn-content.test.ts",
+    "test": "node --experimental-strip-types scripts/challenge-logic.test.ts && node --experimental-strip-types scripts/learn-content.test.ts && node --experimental-strip-types scripts/activity-content.test.ts",
     "preview": "vite preview",
     "logo": "python3 scripts/prepare-logo.py"
   },

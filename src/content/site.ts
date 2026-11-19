@@ -25,6 +25,8 @@ export const navigation = [
   { id: "home", href: "/", label: "Home" },
   { id: "learn", href: "/learn", label: "Learn" },
   { id: "challenge", href: "/challenge", label: "Test" },
+  { id: "activities", href: "/activities", label: "Activities" },
+  { id: "contact", href: "/contact", label: "Contact & Feedback" },
 ] as const;
 
 export type SitePage = (typeof navigation)[number]["id"];

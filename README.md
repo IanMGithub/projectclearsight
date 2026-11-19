@@ -29,6 +29,8 @@ npm test
 | Home | `/` |
 | Learn | `/learn` |
 | Test | `/challenge` |
+| Activities | `/activities` |
+| Contact & Feedback | `/contact` |
 
 There is no `/test` route. The activity keeps `/challenge` so existing links stay valid. Unknown paths render the homepage after the app loads. A static host must send extension-less routes to `index.html`; see Vercel below.
 
@@ -40,6 +42,8 @@ There is no `/test` route. The activity keeps `/challenge` so existing links sta
 - Articles and thumbnails: add one object to `articles` in `src/content/articles.ts` and put the image in `public/articles/`. Cards are rendered from that list.
 - Image credits: the same article object (`imageSourceUrl`, `imageCreator`, `imageLicense`, `imageAttribution`). The current thumbnails are CC0, so the page does not show a credit line. If a future image requires attribution, add that credit outside the linked card.
 - Test pairs and answer labels: `src/content/challenge-pairs.ts`. The private filename map is `data/challenge-image-mapping.json`. Do not put the labeled originals (`challenge-images-originals/`) in `public/`. The answer data ships in the client bundle; it is not a hidden server secret.
+- Practice activities: `src/content/activities.ts`. Each activity is five multiple-choice questions. Open one with `/activities?activity=` and its id.
+- Contact email and the progress-check form: `src/content/contact.ts`.
 
 ## Vercel
 

@@ -43,10 +43,14 @@ assert.equal(currentPage("/learn"), "learn");
 assert.equal(currentPage("/learn/"), "learn");
 assert.equal(currentPage("/challenge"), "challenge");
 assert.equal(currentPage("/challenge/"), "challenge");
+assert.equal(currentPage("/activities"), "activities");
+assert.equal(currentPage("/activities/"), "activities");
+assert.equal(currentPage("/contact"), "contact");
+assert.equal(currentPage("/contact/"), "contact");
 assert.equal(currentPage("/unknown"), "home");
 assert.deepEqual(
   navigation.map((item) => item.label),
-  ["Home", "Learn", "Test"],
+  ["Home", "Learn", "Test", "Activities", "Contact & Feedback"],
 );
 assert.equal(navigation.find((item) => item.label === "Test")?.href, "/challenge");
 assert.equal(
